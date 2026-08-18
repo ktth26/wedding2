@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Елизавета и Никита — 6 августа 2027</title>
+<meta name="description" content="Приглашение на свадьбу Елизаветы и Никиты — 6 августа 2027, Петрозаводск" />
+
+<!-- Запасные кириллические шрифты, пока не подтянутся ваши .otf -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   ШРИФТЫ: положите Caravan.otf и DeparturaExtraLight.otf
+   РЯДОМ с index.html в корне репозитория — они подхватятся сами.
+   ============================================================ */
+@font-face{ font-family:"Caravan";   src:url("Caravan.otf") format("opentype"); font-display:swap; }
+@font-face{ font-family:"Departura"; src:url("DeparturaExtraLight.otf") format("opentype"); font-display:swap; }
+
+:root{
+  --milk:#FFFCFA;
+  --blush-25:#FDF8F6; --blush-50:#FAF0ED; --blush-100:#F6E7E3; --blush-200:#EFD9D4; --blush-300:#E4C2BC; --blush-400:#D5A5A1;
+  --rose-400:#C68B92; --rose-500:#B26E79; --rose-600:#9C5260; --rose-700:#813E4D; --rose-800:#63303C;
+  --cocoa-600:#8A6069; --cocoa-700:#74505A; --cocoa-800:#5A3A44; --cocoa-900:#452A33;
+  --sage-300:#C5C2AB; --sage-500:#97957C;
+  --display:"Caravan","Marck Script",cursive;
+  --body:"Departura","Jost","Trebuchet MS",sans-serif;
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:var(--body); font-weight:300; color:var(--cocoa-700);
+  background:var(--blush-100); letter-spacing:.012em; overflow-x:hidden;
+}
+::selection{ background:var(--rose-600); color:var(--blush-25); }
+img,svg{ display:block; }
+a{ color:inherit; }
+
+#hearts{ position:fixed; inset:0; z-index:0; pointer-events:none; }
+.grain{ position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.05; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)'/></svg>"); }
+
+section{ position:relative; z-index:1; }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
+
+h1,h2,h3{ font-family:var(--display); font-weight:400; color:var(--cocoa-900); line-height:1.05; }
+.eyebrow{ font-size:11px; letter-spacing:.42em; text-transform:uppercase; color:var(--rose-600); }
+.divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin:26px 0 0; }
+.divider i{ height:1px; width:56px; background:var(--rose-500); opacity:.55; }
+.divider svg{ width:14px; height:14px; fill:var(--rose-600); }
+.sub{ max-width:620px; margin:22px auto 0; font-size:17px; line-height:1.7; text-align:center; }
+
+.btn{ display:inline-flex; align-items:center; gap:10px; cursor:pointer; border:none;
+  background:var(--rose-600); color:var(--blush-25); border-radius:999px; padding:15px 34px;
+  font-family:var(--body); font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+  box-shadow:0 10px 24px rgba(156,82,96,.30); transition:transform .25s ease, background .25s ease, box-shadow .25s ease; }
+.btn:hover{ transform:translateY(-2px); background:var(--rose-700); box-shadow:0 14px 30px rgba(129,62,77,.35); }
+.btn svg{ width:14px; height:14px; fill:currentColor; }
+.btn:disabled{ opacity:.65; cursor:wait; transform:none; }
+
+.field{ width:100%; border:1px solid var(--blush-300); background:var(--milk); color:var(--cocoa-800);
+  border-radius:12px; padding:13px 16px; font-family:var(--body); font-weight:300; font-size:15px; outline:none;
+  transition:border-color .25s, box-shadow .25s; }
+.field::placeholder{ color:rgba(116,80,90,.45); }
+.field:focus{ border-color:var(--rose-500); box-shadow:0 0 0 3px rgba(156,82,96,.18); }
+
+.chips{ display:flex; flex-wrap:wrap; gap:10px; }
+.chip{ position:relative; cursor:pointer; }
+.chip input{ position:absolute; opacity:0; }
+.chip span{ display:inline-flex; align-items:center; gap:8px; border:1px solid var(--blush-300); background:var(--milk);
+  color:var(--cocoa-700); border-radius:999px; padding:9px 18px; font-size:14px; transition:all .25s ease; user-select:none; }
+.chip:hover span{ transform:translateY(-2px); border-color:var(--rose-500); color:var(--rose-700); }
+.chip input:checked + span{ border-color:var(--rose-600); background:var(--blush-50); color:var(--rose-700); box-shadow:0 4px 12px rgba(156,82,96,.15); }
+.chip input:checked + span::before{ content:""; width:7px; height:7px; border-radius:50%; background:var(--rose-600); }
+
+.qlabel{ display:block; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--cocoa-600); margin-bottom:12px; }
+.qlabel b{ color:var(--rose-600); font-weight:500; margin-right:8px; }
+.err{ margin-top:8px; font-size:12px; color:var(--rose-700); }
+
+nav{ position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:14px 28px; background:rgba(255,252,250,.85); backdrop-filter:blur(10px); border-bottom:1px solid rgba(228,194,188,.6); }
+nav .logo{ font-family:var(--display); font-size:24px; color:var(--cocoa-900); text-decoration:none; display:flex; align-items:center; gap:8px; }
+nav .logo svg{ width:13px; height:13px; fill:var(--rose-600); }
+nav .links{ display:flex; gap:26px; }
+nav .links a{ font-size:11px; letter-spacing:.26em; text-transform:uppercase; text-decoration:none; color:var(--cocoa-700); transition:color .25s; }
+nav .links a:hover{ color:var(--rose-700); }
+nav .mini{ font-size:11px; letter-spacing:.2em; text-transform:uppercase; text-decoration:none; background:var(--rose-600); color:var(--blush-25); border-radius:999px; padding:9px 20px; transition:background .25s, transform .25s; }
+nav .mini:hover{ background:var(--rose-700); transform:translateY(-2px); }
+@media(max-width:760px){ nav .links{ display:none; } }
+
+.cover{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 24px 90px; }
+.cover .eyebrow{ display:flex; align-items:center; gap:16px; }
+.cover .eyebrow::before,.cover .eyebrow::after{ content:""; height:1px; width:44px; background:var(--rose-500); opacity:.5; }
+.cover h1{ margin-top:30px; font-size:clamp(3.2rem,10vw,7rem); }
+.cover .and{ display:flex; align-items:center; justify-content:center; gap:16px; margin:6px 0; font-size:clamp(1.5rem,4.2vw,2.4rem); color:var(--rose-600); }
+.cover .and svg{ width:18px; height:18px; fill:var(--rose-600); }
+.cover .date{ margin-top:34px; font-size:15px; letter-spacing:.3em; text-transform:uppercase; color:var(--cocoa-800); }
+.cover .place{ margin-top:12px; font-size:15px; color:rgba(116,80,90,.9); }
+.cover .scroll{ margin-top:60px; display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--rose-700); font-size:9px; letter-spacing:.4em; text-transform:uppercase; text-decoration:none; }
+.cover .scroll i{ display:block; width:1px; height:48px; background:rgba(156,82,96,.25); position:relative; overflow:hidden; }
+.cover .scroll i::after{ content:""; position:absolute; inset:0; background:var(--rose-600); animation:hint 2.2s ease-in-out infinite; }
+@keyframes hint{ 0%{transform:scaleY(0);transform-origin:top} 45%{transform:scaleY(1);transform-origin:top} 55%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+.marquee{ overflow:hidden; background:var(--rose-600); color:var(--blush-25); border-top:1px solid rgba(129,62,77,.4); border-bottom:1px solid rgba(129,62,77,.4); padding:14px 0; transform:rotate(-1deg) scale(1.02); }
+.marquee .track{ display:flex; width:max-content; animation:mar 34s linear infinite; }
+.marquee .item{ display:flex; align-items:center; gap:28px; padding-right:28px; white-space:nowrap; font-size:12px; letter-spacing:.32em; text-transform:uppercase; }
+.marquee .item svg{ width:11px; height:11px; fill:var(--blush-200); }
+@keyframes mar{ to{ transform:translateX(-50%);} }
+
+.pad{ padding:110px 0; }
+.white{ background:var(--milk); }
+.center{ text-align:center; }
+h2{ font-size:clamp(2.4rem,6vw,4rem); margin-top:14px; }
+
+.invite p{ max-width:640px; margin:0 auto 22px; font-size:18px; line-height:1.75; text-align:center; }
+.invite .sign{ margin-top:36px; font-family:var(--display); font-size:clamp(1.6rem,4vw,2.3rem); color:var(--rose-700); }
+
+.count{ display:flex; align-items:flex-start; justify-content:center; gap:14px; margin-top:40px; flex-wrap:wrap; }
+.count .cell{ width:76px; text-align:center; }
+.count .num{ font-size:44px; font-weight:200; color:var(--cocoa-900); font-variant-numeric:tabular-nums; }
+.count .lab{ margin-top:6px; font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--cocoa-600); }
+.count .sep{ margin-top:14px; }
+.count .sep svg{ width:12px; height:12px; fill:var(--rose-400); }
+.date-note{ max-width:520px; margin:34px auto 0; font-size:15px; line-height:1.7; text-align:center; }
+
+.places{ display:grid; gap:28px; margin-top:60px; grid-template-columns:1fr; }
+@media(min-width:860px){ .places{ grid-template-columns:1fr 1fr; } }
+.place-card{ border:1px solid var(--blush-200); background:var(--blush-25); border-radius:26px; padding:38px 34px; position:relative; overflow:hidden;
+  transition:transform .3s ease, box-shadow .3s ease; text-align:left; }
+.place-card:hover{ transform:translateY(-5px); box-shadow:0 22px 44px rgba(129,62,77,.12); }
+.place-card .tag{ position:absolute; top:0; right:34px; background:var(--rose-600); color:var(--blush-25); border-radius:0 0 12px 12px; padding:7px 16px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; }
+.place-card h3{ font-size:30px; }
+.place-card .addr{ margin-top:14px; font-size:16px; line-height:1.6; color:var(--cocoa-700); }
+.place-card .route{ display:inline-flex; align-items:center; gap:9px; margin-top:22px; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-700); text-decoration:none; border-bottom:1px solid rgba(156,82,96,.4); padding-bottom:4px; transition:color .25s, border-color .25s; }
+.place-card .route:hover{ color:var(--rose-800); border-color:var(--rose-700); }
+.place-card .route svg{ width:13px; height:13px; }
+
+.journey{ height:320vh; }
+.journey-sticky{ position:sticky; top:0; height:100vh; overflow:hidden; display:flex; flex-direction:column; justify-content:center; background:linear-gradient(180deg,var(--blush-100),var(--blush-50)); }
+.journey-head{ text-align:center; padding:0 24px; }
+.roadbox{ position:relative; width:100%; max-width:1200px; margin:40px auto 0; height:46vh; min-height:320px; }
+.roadbox svg.road{ position:absolute; inset:0; width:100%; height:100%; }
+.road .base{ stroke:var(--blush-300); stroke-width:14; fill:none; stroke-linecap:round; }
+.road .dash{ stroke:var(--milk); stroke-width:3; fill:none; stroke-linecap:round; stroke-dasharray:12 16; }
+.road .gone{ stroke:var(--rose-600); stroke-width:14; fill:none; stroke-linecap:round; }
+.car{ position:absolute; width:96px; margin-left:-48px; margin-top:-70px; transform-origin:50% 100%; will-change:transform; z-index:3; }
+.stop{ position:absolute; transform:translate(-50%,-100%); text-align:center; z-index:2; opacity:.35; transition:opacity .4s ease, transform .4s ease; margin-top:-14px; }
+.stop.active{ opacity:1; transform:translate(-50%,-100%) scale(1.06); }
+.stop .pin{ width:34px; height:34px; margin:0 auto; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--rose-600); box-shadow:0 8px 18px rgba(129,62,77,.35); display:flex; align-items:center; justify-content:center; }
+.stop .pin svg{ width:15px; height:15px; fill:var(--blush-25); transform:rotate(45deg); }
+.stop .t{ margin-top:12px; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--cocoa-800); white-space:nowrap; }
+.stop .d{ margin-top:4px; font-size:12px; color:var(--cocoa-600); white-space:nowrap; }
+.journey-cards{ max-width:560px; margin:34px auto 0; min-height:120px; padding:0 24px; }
+.jcard{ display:none; text-align:center; animation:fadeup .5s ease; }
+.jcard.on{ display:block; }
+.jcard h3{ font-size:26px; color:var(--rose-700); }
+.jcard p{ margin-top:10px; font-size:16px; line-height:1.65; color:var(--cocoa-700); }
+@keyframes fadeup{ from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);} }
+
+.palette{ display:flex; justify-content:center; flex-wrap:wrap; gap:26px; margin-top:46px; }
+.swatch{ text-align:center; }
+.swatch i{ display:block; width:52px; height:52px; border-radius:50%; border:1px solid rgba(69,42,51,.12); margin:0 auto 10px; box-shadow:0 6px 14px rgba(129,62,77,.12); transition:transform .3s ease; }
+.swatch:hover i{ transform:scale(1.12) rotate(-6deg); }
+.swatch span{ font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--cocoa-600); }
+
+.form-card{ max-width:640px; margin:56px auto 0; background:var(--milk); border:1px solid var(--blush-200); border-radius:60px 60px 26px 26px; padding:52px 40px 46px; box-shadow:0 26px 60px rgba(129,62,77,.12); }
+.form-card .q{ margin-bottom:30px; text-align:left; }
+.form-card .foot{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:6px; }
+.form-card .hint{ font-size:12px; color:var(--cocoa-600); }
+.done{ text-align:center; padding:20px 0 6px; }
+.done .ring{ width:84px; height:84px; margin:0 auto; border-radius:50%; background:var(--rose-600); display:flex; align-items:center; justify-content:center; box-shadow:0 16px 34px rgba(156,82,96,.35); animation:beat 2.4s ease-in-out infinite; }
+.done .ring svg{ width:36px; height:36px; fill:var(--blush-25); }
+@keyframes beat{ 0%,100%{transform:scale(1)} 14%{transform:scale(1.12)} 28%{transform:scale(1)} 42%{transform:scale(1.07)} 56%{transform:scale(1)} }
+.done h3{ margin-top:26px; font-size:30px; }
+.done p{ margin-top:12px; font-size:16px; line-height:1.65; }
+.done .again{ margin-top:26px; background:none; border:none; cursor:pointer; font-family:var(--body); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-700); border-bottom:1px solid rgba(156,82,96,.4); padding-bottom:3px; }
+
+footer{ background:var(--rose-800); color:var(--blush-200); text-align:center; padding:70px 24px 46px; position:relative; z-index:1; }
+footer h2{ color:var(--blush-25); font-size:clamp(2.6rem,7vw,4rem); }
+footer .line{ margin-top:18px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; }
+footer .tag{ margin-top:30px; font-size:12px; letter-spacing:.24em; color:rgba(228,194,188,.7); }
+footer .made{ margin-top:34px; display:flex; align-items:center; justify-content:center; gap:8px; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:rgba(228,194,188,.5); }
+footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
+
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+  html{ scroll-behavior:auto; }
+}
+</style>
+</head>
+<body>
+
+<canvas id="hearts" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<nav>
+  <a class="logo" href="#top">Е<svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg>Н</a>
+  <div class="links">
+    <a href="#date">Дата</a>
+    <a href="#place">Место</a>
+    <a href="#day">День</a>
+    <a href="#dress">Дресс-код</a>
+  </div>
+  <a class="mini" href="#rsvp">Анкета</a>
+</nav>
+
+<header class="cover" id="top">
+  <p class="eyebrow">приглашение на свадьбу</p>
+  <h1>Елизавета</h1>
+  <div class="and">
+    <svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg>
+    и
+    <svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg>
+  </div>
+  <h1>Никита</h1>
+  <p class="date">6 августа 2027 · пятница</p>
+  <p class="place">Петрозаводск · роспись в 14:40</p>
+  <a class="scroll" href="#invite">листайте<i></i></a>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="marqueeTrack"></div>
+</div>
+
+<section class="pad white invite" id="invite">
+  <div class="wrap">
+    <p class="eyebrow reveal">наше приглашение</p>
+    <h2 class="reveal">Дорогие наши!</h2>
+    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+    <div style="height:34px"></div>
+    <p class="reveal">В жизни есть дни, которые делят время на «до» и «после». Для нас такой день — <b style="color:var(--rose-700)">6 августа 2027 года</b>: мы станем семьёй.</p>
+    <p class="reveal">Мы будем бесконечно счастливы разделить этот день с вами — самыми близкими и дорогими. Приходите! Без вас наш праздник будет неполным.</p>
+    <p class="sign reveal">С любовью, Елизавета и Никита</p>
+  </div>
+</section>
+
+<section class="pad" id="date">
+  <div class="wrap center">
+    <p class="eyebrow reveal">save the date</p>
+    <h2 class="reveal">Сохраните дату</h2>
+    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+    <p class="sub reveal">До самого тёплого дня этого лета осталось совсем немного</p>
+    <div class="count reveal">
+      <div class="cell"><div class="num" id="cd-d">00</div><div class="lab">дней</div></div>
+      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <div class="cell"><div class="num" id="cd-h">00</div><div class="lab">часов</div></div>
+      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <div class="cell"><div class="num" id="cd-m">00</div><div class="lab">минут</div></div>
+      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <div class="cell"><div class="num" id="cd-s">00</div><div class="lab">секунд</div></div>
+    </div>
+    <p class="date-note reveal">Роспись начнётся в <b>14:40</b>. Приходите минут за двадцать — и мы встретим вас у ЗАГСа.</p>
+  </div>
+</section>
+
+<section class="pad white" id="place">
+  <div class="wrap center">
+    <p class="eyebrow reveal">место торжества</p>
+    <h2 class="reveal">Где мы вас ждём</h2>
+    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+  </div>
+  <div class="wrap places">
+    <div class="place-card reveal">
+      <span class="tag">14:40</span>
+      <h3>Роспись в ЗАГСе</h3>
+      <p class="addr">Петрозаводск, ул. Еремеева, 1<br>Самые важные слова — официально и очень трогательно.</p>
+      <a class="route" target="_blank" rel="noreferrer" href="https://yandex.ru/maps/?text=%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%2C%20%D1%83%D0%BB.%20%D0%95%D1%80%D0%B5%D0%BC%D0%B5%D0%B5%D0%B2%D0%B0%2C%201">
+        Маршрут
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+    <div class="place-card reveal">
+      <span class="tag">16:00</span>
+      <h3>Банкет в геокуполе</h3>
+      <p class="addr">Лососинское шоссе, 17<br>Праздничный ужин, тосты и танцы — под стеклянным небом до 01:00.</p>
+      <a class="route" target="_blank" rel="noreferrer" href="https://yandex.ru/maps/?text=%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%2C%20%D0%9B%D0%BE%D1%81%D0%BE%D1%81%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5%20%D1%88%D0%BE%D1%81%D1%81%D0%B5%2C%2017">
+        Маршрут
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="journey" id="day">
+  <div class="journey-sticky">
+    <div class="journey-head">
+      <p class="eyebrow">тайминг</p>
+      <h2>Как пройдёт день</h2>
+      <div class="divider"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+      <p class="sub">Листайте — мы поедем по маршруту нашего дня</p>
+    </div>
+
+    <div class="roadbox">
+      <svg class="road" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
+        <path id="roadBase" class="base" d="M -40 320 C 120 300 180 220 300 210 C 430 200 470 130 560 120 C 660 110 700 180 820 170 C 900 163 950 120 1040 110"/>
+        <path id="roadDash" class="dash" d="M -40 320 C 120 300 180 220 300 210 C 430 200 470 130 560 120 C 660 110 700 180 820 170 C 900 163 950 120 1040 110"/>
+        <path id="roadGone" class="gone" d="M -40 320 C 120 300 180 220 300 210 C 430 200 470 130 560 120 C 660 110 700 180 820 170 C 900 163 950 120 1040 110"/>
+      </svg>
+
+      <div class="stop" data-frac="0.32" data-card="0">
+        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+        <div class="t">14:40 · ЗАГС</div><div class="d">ул. Еремеева, 1</div>
+      </div>
+      <div class="stop" data-frac="0.63" data-card="1">
+        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+        <div class="t">16:00 · Геокупол</div><div class="d">Лососинское ш., 17</div>
+      </div>
+      <div class="stop" data-frac="0.95" data-card="2">
+        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+        <div class="t">01:00 · Финал</div><div class="d">танцы до последнего</div>
+      </div>
+
+      <div class="car" id="car">
+        <svg viewBox="0 0 120 90" width="96" height="72" aria-hidden="true">
+          <circle cx="46" cy="26" r="10" fill="#5A3A44"/>
+          <circle cx="46" cy="30" r="8" fill="#F6E0D2"/>
+          <rect x="38" y="16" width="16" height="6" rx="2" fill="#452A33"/>
+          <circle cx="72" cy="26" r="10" fill="#F6E0D2"/>
+          <path d="M64 20 q8 -10 16 0 q2 6 -2 8 l-12 0 q-4 -2 -2 -8z" fill="#8A6069"/>
+          <path d="M64 22 q-4 10 2 16 l4 -2 q-4 -8 -1 -14z" fill="rgba(255,252,250,.9)"/>
+          <circle cx="78" cy="24" r="2" fill="#C68B92"/>
+          <path d="M59 8 c-2.5-2.5-6.5-1-6.5 2 0 2.5 4 5 6.5 7 2.5-2 6.5-4.5 6.5-7 0-3-4-4.5-6.5-2z" fill="#9C5260"/>
+          <path d="M14 62 q0-14 14-16 l14-2 q6-8 18-8 h14 q12 0 16 10 l10 2 q8 2 8 14 v4 h-94 z" fill="#B26E79"/>
+          <path d="M44 40 q5-6 14-6 h12 q8 0 11 8 l2 6 h-40 z" fill="#FAF0ED"/>
+          <rect x="100" y="52" width="8" height="5" rx="2" fill="#F6E7E3"/>
+          <rect x="14" y="52" width="7" height="5" rx="2" fill="#813E4D"/>
+          <circle cx="34" cy="66" r="11" fill="#452A33"/><circle cx="34" cy="66" r="4.5" fill="#D5A5A1"/>
+          <circle cx="88" cy="66" r="11" fill="#452A33"/><circle cx="88" cy="66" r="4.5" fill="#D5A5A1"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="journey-cards" id="jcards">
+      <div class="jcard"><h3>14:40 — Роспись</h3><p>Встречаемся у ЗАГСа на Еремеева, 1. Берите платочки — будет трогательно.</p></div>
+      <div class="jcard"><h3>16:00 — Банкет</h3><p>Переезжаем в геокупол на Лососинском, 17: ужин, тосты и первый танец.</p></div>
+      <div class="jcard"><h3>01:00 — Финал</h3><p>Танцуем до последнего, зажигаем бенгальские огни и провожаем этот день.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad white" id="dress">
+  <div class="wrap center">
+    <p class="eyebrow">немного о важном</p>
+    <h2>Дресс-код</h2>
+    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+    <p class="sub reveal">Мы будем рады, если в нарядах вы поддержите нежную пастельную палитру. Белый, пожалуйста, оставьте невесте :)</p>
+    <div class="palette reveal">
+      <div class="swatch"><i style="background:#F7E8B0"></i><span>жёлтый</span></div>
+      <div class="swatch"><i style="background:#CFE3C8"></i><span>зелёный</span></div>
+      <div class="swatch"><i style="background:#C9DDEB"></i><span>голубой</span></div>
+      <div class="swatch"><i style="background:#F3D3D6"></i><span>розовый</span></div>
+      <div class="swatch"><i style="background:#FFFCFA"></i><span>молочный</span></div>
+      <div class="swatch"><i style="background:#E8DCC8"></i><span>бежевый</span></div>
+      <div class="swatch"><i style="background:#A98467"></i><span>коричневый</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad" id="rsvp">
+  <div class="wrap center">
+    <p class="eyebrow">анкета гостя</p>
+    <h2>Что вам приготовить?</h2>
+    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+    <p class="sub reveal">Пожалуйста, ответьте до <b>1 августа 2027</b> — чтобы мы заказали ровно столько пиццы и сока, сколько нужно</p>
+  </div>
+
+  <div class="form-card reveal">
+    <form id="rsvpForm" novalidate>
+      <div class="q">
+        <label class="qlabel" for="gname"><b>01</b>Как вас зовут?</label>
+        <input class="field" id="gname" type="text" placeholder="Имя и фамилия" autocomplete="name" />
+        <p class="err" id="err-name" hidden>Подскажите, как вас зовут</p>
+      </div>
+      <div class="q">
+        <span class="qlabel"><b>02</b>Что будете есть?</span>
+        <div class="chips" id="food">
+          <label class="chip"><input type="checkbox" value="Пицца"><span>Пицца</span></label>
+          <label class="chip"><input type="checkbox" value="Картофель фри"><span>Картофель фри</span></label>
+          <label class="chip"><input type="checkbox" value="Паста"><span>Паста</span></label>
+          <label class="chip"><input type="checkbox" value="Салат"><span>Салат</span></label>
+          <label class="chip"><input type="checkbox" value="Десерт"><span>Десерт</span></label>
+        </div>
+        <p class="err" id="err-food" hidden>Выберите хотя бы одно блюдо</p>
+      </div>
+      <div class="q">
+        <span class="qlabel"><b>03</b>Что будете пить?</span>
+        <div class="chips" id="drinks">
+          <label class="chip"><input type="checkbox" value="Чай"><span>Чай</span></label>
+          <label class="chip"><input type="checkbox" value="Кофе"><span>Кофе</span></label>
+          <label class="chip"><input type="checkbox" value="Яблочный сок"><span>Яблочный сок</span></label>
+          <label class="chip"><input type="checkbox" value="Морс"><span>Морс</span></label>
+          <label class="chip"><input type="checkbox" value="Лимонад"><span>Лимонад</span></label>
+          <label class="chip"><input type="checkbox" value="Вода"><span>Вода</span></label>
+        </div>
+        <p class="err" id="err-drinks" hidden>Выберите хотя бы один напиток</p>
+      </div>
+      <div class="q">
+        <label class="qlabel" for="gwishes"><b>04</b>Пожелания — по желанию</label>
+        <textarea class="field" id="gwishes" rows="3" placeholder="Аллергии, особые просьбы или просто привет"></textarea>
+      </div>
+      <div class="foot">
+        <button class="btn" type="submit" id="sendBtn">
+          Отправить ответ
+          <svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg>
+        </button>
+        <span class="hint">ответ попадёт в нашу Google-таблицу</span>
+      </div>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <div class="ring"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <h3>Спасибо, <span id="doneName">дорогой гость</span>!</h3>
+      <p>Ваш ответ улетел в нашу таблицу — мы уже считаем тарелки пиццы и стаканы яблочного сока. До встречи 6 августа!</p>
+      <button class="again" type="button" id="againBtn">Изменить ответ</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <h2>Ждём вас!</h2>
+  <p class="line">Елизавета и Никита · 06.08.2027</p>
+  <p class="tag">#ЕлизаветаИНикита2027</p>
+  <p class="made">сделано с <svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg> любовью</p>
+</footer>
+
+<script>
+/* =====================================================================
+   ⬇️⬇️⬇️  ВСТАВЬТЕ СЮДА адрес вашего Google Apps Script (заканчивается на /exec)
+   Как его получить — см. шаг 2 инструкции.
+   ===================================================================== */
+const SCRIPT_URL = "ВСТАВЬТЕ_СЮДА_АДРЕС_СЦЕНАРИЯ";
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------------- падающие сердечки ---------------- */
+(function(){
+  const c = document.getElementById("hearts");
+  const ctx = c.getContext("2d");
+  let W, H, hearts = [];
+  const COLORS = ["#B26E79","#9C5260","#C68B92","#813E4D"];
+  function resize(){ W = c.width = innerWidth; H = c.height = innerHeight; }
+  function heart(x,y,s,rot,color,alpha){
+    ctx.save(); ctx.translate(x,y); ctx.rotate(rot); ctx.globalAlpha = alpha; ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(0, s*0.35);
+    ctx.bezierCurveTo(s*0.5, -s*0.15, s*0.9, s*0.25, 0, s);
+    ctx.bezierCurveTo(-s*0.9, s*0.25, -s*0.5, -s*0.15, 0, s*0.35);
+    ctx.fill(); ctx.restore();
+  }
+  function make(){ return { x:Math.random()*W, y:-30-Math.random()*H, s:8+Math.random()*16,
+    v:0.4+Math.random()*0.9, r:Math.random()*Math.PI, vr:(Math.random()-0.5)*0.01,
+    a:0.12+Math.random()*0.22, c:COLORS[Math.random()*COLORS.length|0] }; }
+  resize(); addEventListener("resize", resize);
+  const N = Math.min(40, Math.floor(innerWidth/28));
+  for(let i=0;i<N;i++){ const h=make(); h.y=Math.random()*H; hearts.push(h); }
+  if(reduceMotion){ hearts.forEach(h=>heart(h.x,h.y,h.s,h.r,h.c,h.a)); return; }
+  (function loop(){
+    ctx.clearRect(0,0,W,H);
+    hearts.forEach(h=>{ h.y+=h.v; h.r+=h.vr; if(h.y>H+40){ Object.assign(h,make()); } heart(h.x,h.y,h.s,h.r,h.c,h.a); });
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ---------------- бегущая строка ---------------- */
+(function(){
+  const items = ["Елизавета и Никита","6 августа 2027","пятница","Петрозаводск","ждём вас"];
+  const heart = '<svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg>';
+  const half = items.map(t=>`<span class="item">${t}${heart}</span>`).join("");
+  document.getElementById("marqueeTrack").innerHTML = half + half;
+})();
+
+/* ---------------- появление при скролле ---------------- */
+(function(){
+  const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }),{threshold:.15});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+})();
+
+/* ---------------- обратный отсчёт ---------------- */
+(function(){
+  const target = new Date(2027,7,6,14,40,0).getTime();
+  function two(n){ return String(n).padStart(2,"0"); }
+  function tick(){
+    const diff = Math.max(0, target - Date.now());
+    document.getElementById("cd-d").textContent = two(Math.floor(diff/86400000));
+    document.getElementById("cd-h").textContent = two(Math.floor(diff/3600000)%24);
+    document.getElementById("cd-m").textContent = two(Math.floor(diff/60000)%60);
+    document.getElementById("cd-s").textContent = two(Math.floor(diff/1000)%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* ---------------- путешествие: машинка едет по дороге ---------------- */
+(function(){
+  const sec = document.getElementById("day");
+  const road = document.getElementById("roadBase");
+  const gone = document.getElementById("roadGone");
+  const car = document.getElementById("car");
+  const box = document.querySelector(".roadbox");
+  const stops = [...document.querySelectorAll(".stop")];
+  const cards = [...document.querySelectorAll(".jcard")];
+  const total = road.getTotalLength();
+
+  stops.forEach(s=>{
+    const p = road.getPointAtLength(parseFloat(s.dataset.frac)*total);
+    s.style.left = (p.x/1000*100)+"%";
+    s.style.top  = (p.y/400*100)+"%";
+  });
+
+  function progress(){
+    const r = sec.getBoundingClientRect();
+    const max = sec.offsetHeight - innerHeight;
+    return Math.min(1, Math.max(0, -r.top / max));
+  }
+  function place(){
+    const t = progress();
+    const L = t*total;
+    const p = road.getPointAtLength(L);
+    const q = road.getPointAtLength(Math.min(total, L+2));
+    const bw = box.clientWidth, bh = box.clientHeight;
+    const x = p.x/1000*bw, y = p.y/400*bh;
+    const ang = Math.atan2((q.y-p.y)/400*bh, (q.x-p.x)/1000*bw)*180/Math.PI;
+    car.style.left = x+"px";
+    car.style.top = y+"px";
+    car.style.transform = `rotate(${ang}deg)`;
+    gone.style.strokeDasharray = total;
+    gone.style.strokeDashoffset = total - L;
+    let active = -1;
+    stops.forEach((s,i)=>{
+      const f = parseFloat(s.dataset.frac);
+      const on = t >= f-0.03;
+      s.classList.toggle("active", on);
+      if(on) active = i;
+    });
+    cards.forEach((c,i)=>c.classList.toggle("on", i===Math.max(active,0)));
+  }
+  if(reduceMotion){ place(); return; }
+  let raf=null;
+  function onScroll(){ if(raf) return; raf=requestAnimationFrame(()=>{ raf=null; place(); }); }
+  addEventListener("scroll", onScroll, {passive:true});
+  addEventListener("resize", onScroll);
+  place();
+})();
+
+/* ---------------- анкета -> Google Таблица ---------------- */
+(function(){
+  const form = document.getElementById("rsvpForm");
+  const done = document.getElementById("done");
+  const btn = document.getElementById("sendBtn");
+  const checked = id => [...document.querySelectorAll("#"+id+" input:checked")].map(i=>i.value);
+
+  form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const name = document.getElementById("gname").value.trim();
+    const food = checked("food");
+    const drinks = checked("drinks");
+    const wishes = document.getElementById("gwishes").value.trim();
+
+    document.getElementById("err-name").hidden = name.length>=2;
+    document.getElementById("err-food").hidden = food.length>0;
+    document.getElementById("err-drinks").hidden = drinks.length>0;
+    if(name.length<2 || food.length===0 || drinks.length===0) return;
+
+    btn.disabled = true; btn.firstChild.textContent = "Сохраняем... ";
+    const body = new URLSearchParams({ name, food:food.join(", "), drinks:drinks.join(", "), wishes });
+    try{
+      await fetch(SCRIPT_URL, { method:"POST", mode:"no-cors", body });
+      document.getElementById("doneName").textContent = name.split(/\s+/)[0];
+      form.hidden = true; done.hidden = false;
+    }catch(err){
+      alert("Не удалось отправить. Проверьте интернет и попробуйте ещё раз.");
+    }finally{
+      btn.disabled = false; btn.firstChild.textContent = "Отправить ответ";
+    }
+  });
+
+  document.getElementById("againBtn").addEventListener("click", ()=>{
+    done.hidden = true; form.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>
