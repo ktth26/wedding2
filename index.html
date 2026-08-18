@@ -24,7 +24,6 @@
   --blush-25:#FDF8F6; --blush-50:#FAF0ED; --blush-100:#F6E7E3; --blush-200:#EFD9D4; --blush-300:#E4C2BC; --blush-400:#D5A5A1;
   --rose-400:#C68B92; --rose-500:#B26E79; --rose-600:#9C5260; --rose-700:#813E4D; --rose-800:#63303C;
   --cocoa-600:#8A6069; --cocoa-700:#74505A; --cocoa-800:#5A3A44; --cocoa-900:#452A33;
-  --sage-300:#C5C2AB; --sage-500:#97957C;
   --display:"Caravan","Marck Script",cursive;
   --body:"Departura","Jost","Trebuchet MS",sans-serif;
 }
@@ -45,12 +44,12 @@ a{ color:inherit; }
 section{ position:relative; z-index:1; }
 .wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
 
-h1,h2,h3{ font-family:var(--display); font-weight:400; color:var(--cocoa-900); line-height:1.05; }
+h1,h2,h3{ font-family:var(--display); font-weight:400; color:var(--cocoa-900); line-height:1.02; }
 .eyebrow{ font-size:11px; letter-spacing:.42em; text-transform:uppercase; color:var(--rose-600); }
-.divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin:26px 0 0; }
+.divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin:30px 0 0; }
 .divider i{ height:1px; width:56px; background:var(--rose-500); opacity:.55; }
-.divider svg{ width:14px; height:14px; fill:var(--rose-600); }
-.sub{ max-width:620px; margin:22px auto 0; font-size:17px; line-height:1.7; text-align:center; }
+.divider svg{ width:15px; height:15px; fill:var(--rose-600); }
+.sub{ max-width:640px; margin:24px auto 0; font-size:17px; line-height:1.7; text-align:center; }
 
 .btn{ display:inline-flex; align-items:center; gap:10px; cursor:pointer; border:none;
   background:var(--rose-600); color:var(--blush-25); border-radius:999px; padding:15px 34px;
@@ -81,8 +80,8 @@ h1,h2,h3{ font-family:var(--display); font-weight:400; color:var(--cocoa-900); l
 
 nav{ position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
   gap:16px; padding:14px 28px; background:rgba(255,252,250,.85); backdrop-filter:blur(10px); border-bottom:1px solid rgba(228,194,188,.6); }
-nav .logo{ font-family:var(--display); font-size:24px; color:var(--cocoa-900); text-decoration:none; display:flex; align-items:center; gap:8px; }
-nav .logo svg{ width:13px; height:13px; fill:var(--rose-600); }
+nav .logo{ font-family:var(--display); font-size:32px; color:var(--cocoa-900); text-decoration:none; display:flex; align-items:center; gap:9px; }
+nav .logo svg{ width:14px; height:14px; fill:var(--rose-600); }
 nav .links{ display:flex; gap:26px; }
 nav .links a{ font-size:11px; letter-spacing:.26em; text-transform:uppercase; text-decoration:none; color:var(--cocoa-700); transition:color .25s; }
 nav .links a:hover{ color:var(--rose-700); }
@@ -93,12 +92,12 @@ nav .mini:hover{ background:var(--rose-700); transform:translateY(-2px); }
 .cover{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 24px 90px; }
 .cover .eyebrow{ display:flex; align-items:center; gap:16px; }
 .cover .eyebrow::before,.cover .eyebrow::after{ content:""; height:1px; width:44px; background:var(--rose-500); opacity:.5; }
-.cover h1{ margin-top:30px; font-size:clamp(3.2rem,10vw,7rem); }
-.cover .and{ display:flex; align-items:center; justify-content:center; gap:16px; margin:6px 0; font-size:clamp(1.5rem,4.2vw,2.4rem); color:var(--rose-600); }
-.cover .and svg{ width:18px; height:18px; fill:var(--rose-600); }
-.cover .date{ margin-top:34px; font-size:15px; letter-spacing:.3em; text-transform:uppercase; color:var(--cocoa-800); }
+.cover h1{ margin-top:34px; font-size:clamp(3.8rem,12vw,8.6rem); }
+.cover .and{ display:flex; align-items:center; justify-content:center; gap:18px; margin:10px 0; font-family:var(--display); font-size:clamp(2rem,5vw,3.2rem); color:var(--rose-600); }
+.cover .and svg{ width:19px; height:19px; fill:var(--rose-600); }
+.cover .date{ margin-top:38px; font-size:15px; letter-spacing:.3em; text-transform:uppercase; color:var(--cocoa-800); }
 .cover .place{ margin-top:12px; font-size:15px; color:rgba(116,80,90,.9); }
-.cover .scroll{ margin-top:60px; display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--rose-700); font-size:9px; letter-spacing:.4em; text-transform:uppercase; text-decoration:none; }
+.cover .scroll{ margin-top:64px; display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--rose-700); font-size:9px; letter-spacing:.4em; text-transform:uppercase; text-decoration:none; }
 .cover .scroll i{ display:block; width:1px; height:48px; background:rgba(156,82,96,.25); position:relative; overflow:hidden; }
 .cover .scroll i::after{ content:""; position:absolute; inset:0; background:var(--rose-600); animation:hint 2.2s ease-in-out infinite; }
 @keyframes hint{ 0%{transform:scaleY(0);transform-origin:top} 45%{transform:scaleY(1);transform-origin:top} 55%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
@@ -112,56 +111,58 @@ nav .mini:hover{ background:var(--rose-700); transform:translateY(-2px); }
 .pad{ padding:110px 0; }
 .white{ background:var(--milk); }
 .center{ text-align:center; }
-h2{ font-size:clamp(2.4rem,6vw,4rem); margin-top:14px; }
+h2{ font-size:clamp(3rem,8vw,5.4rem); margin-top:16px; }
 
-.invite p{ max-width:640px; margin:0 auto 22px; font-size:18px; line-height:1.75; text-align:center; }
-.invite .sign{ margin-top:36px; font-family:var(--display); font-size:clamp(1.6rem,4vw,2.3rem); color:var(--rose-700); }
+.invite p{ max-width:660px; margin:0 auto 24px; font-size:18px; line-height:1.75; text-align:center; }
+.invite .sign{ margin-top:42px; font-family:var(--display); font-size:clamp(2.1rem,5.5vw,3.2rem); color:var(--rose-700); line-height:1.2; }
 
-.count{ display:flex; align-items:flex-start; justify-content:center; gap:14px; margin-top:40px; flex-wrap:wrap; }
-.count .cell{ width:76px; text-align:center; }
-.count .num{ font-size:44px; font-weight:200; color:var(--cocoa-900); font-variant-numeric:tabular-nums; }
+.count{ display:flex; align-items:flex-start; justify-content:center; gap:14px; margin-top:44px; flex-wrap:wrap; }
+.count .cell{ width:80px; text-align:center; }
+.count .num{ font-size:46px; font-weight:200; color:var(--cocoa-900); font-variant-numeric:tabular-nums; }
 .count .lab{ margin-top:6px; font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--cocoa-600); }
 .count .sep{ margin-top:14px; }
 .count .sep svg{ width:12px; height:12px; fill:var(--rose-400); }
-.date-note{ max-width:520px; margin:34px auto 0; font-size:15px; line-height:1.7; text-align:center; }
+.date-note{ max-width:560px; margin:38px auto 0; font-size:16px; line-height:1.7; text-align:center; }
+.timer{ background:var(--milk); }
 
 .places{ display:grid; gap:28px; margin-top:60px; grid-template-columns:1fr; }
 @media(min-width:860px){ .places{ grid-template-columns:1fr 1fr; } }
-.place-card{ border:1px solid var(--blush-200); background:var(--blush-25); border-radius:26px; padding:38px 34px; position:relative; overflow:hidden;
+.place-card{ border:1px solid var(--blush-200); background:var(--blush-25); border-radius:26px; padding:40px 36px; position:relative; overflow:hidden;
   transition:transform .3s ease, box-shadow .3s ease; text-align:left; }
 .place-card:hover{ transform:translateY(-5px); box-shadow:0 22px 44px rgba(129,62,77,.12); }
-.place-card .tag{ position:absolute; top:0; right:34px; background:var(--rose-600); color:var(--blush-25); border-radius:0 0 12px 12px; padding:7px 16px; font-size:11px; letter-spacing:.24em; text-transform:uppercase; }
-.place-card h3{ font-size:30px; }
-.place-card .addr{ margin-top:14px; font-size:16px; line-height:1.6; color:var(--cocoa-700); }
-.place-card .route{ display:inline-flex; align-items:center; gap:9px; margin-top:22px; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-700); text-decoration:none; border-bottom:1px solid rgba(156,82,96,.4); padding-bottom:4px; transition:color .25s, border-color .25s; }
+.place-card .tag{ position:absolute; top:0; right:34px; background:var(--rose-600); color:var(--blush-25); border-radius:0 0 12px 12px; padding:8px 16px; font-size:12px; letter-spacing:.24em; }
+.place-card h3{ font-size:clamp(2.2rem,4vw,2.9rem); }
+.place-card .addr{ margin-top:16px; font-size:16px; line-height:1.6; color:var(--cocoa-700); }
+.place-card .route{ display:inline-flex; align-items:center; gap:9px; margin-top:24px; font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-700); text-decoration:none; border-bottom:1px solid rgba(156,82,96,.4); padding-bottom:4px; transition:color .25s, border-color .25s; }
 .place-card .route:hover{ color:var(--rose-800); border-color:var(--rose-700); }
 .place-card .route svg{ width:13px; height:13px; }
 
-.journey{ height:320vh; }
+/* -------- вертикальный маршрут -------- */
+.journey{ height:330vh; }
 .journey-sticky{ position:sticky; top:0; height:100vh; overflow:hidden; display:flex; flex-direction:column; justify-content:center; background:linear-gradient(180deg,var(--blush-100),var(--blush-50)); }
 .journey-head{ text-align:center; padding:0 24px; }
-.roadbox{ position:relative; width:100%; max-width:1200px; margin:40px auto 0; height:46vh; min-height:320px; }
-.roadbox svg.road{ position:absolute; inset:0; width:100%; height:100%; }
-.road .base{ stroke:var(--blush-300); stroke-width:14; fill:none; stroke-linecap:round; }
-.road .dash{ stroke:var(--milk); stroke-width:3; fill:none; stroke-linecap:round; stroke-dasharray:12 16; }
-.road .gone{ stroke:var(--rose-600); stroke-width:14; fill:none; stroke-linecap:round; }
-.car{ position:absolute; width:96px; margin-left:-48px; margin-top:-70px; transform-origin:50% 100%; will-change:transform; z-index:3; }
-.stop{ position:absolute; transform:translate(-50%,-100%); text-align:center; z-index:2; opacity:.35; transition:opacity .4s ease, transform .4s ease; margin-top:-14px; }
-.stop.active{ opacity:1; transform:translate(-50%,-100%) scale(1.06); }
-.stop .pin{ width:34px; height:34px; margin:0 auto; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--rose-600); box-shadow:0 8px 18px rgba(129,62,77,.35); display:flex; align-items:center; justify-content:center; }
-.stop .pin svg{ width:15px; height:15px; fill:var(--blush-25); transform:rotate(45deg); }
-.stop .t{ margin-top:12px; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--cocoa-800); white-space:nowrap; }
-.stop .d{ margin-top:4px; font-size:12px; color:var(--cocoa-600); white-space:nowrap; }
-.journey-cards{ max-width:560px; margin:34px auto 0; min-height:120px; padding:0 24px; }
-.jcard{ display:none; text-align:center; animation:fadeup .5s ease; }
-.jcard.on{ display:block; }
-.jcard h3{ font-size:26px; color:var(--rose-700); }
-.jcard p{ margin-top:10px; font-size:16px; line-height:1.65; color:var(--cocoa-700); }
-@keyframes fadeup{ from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);} }
+.journey-head h2{ font-size:clamp(2.6rem,6vw,4.2rem); }
+.roadbox{ position:relative; width:100%; max-width:1000px; margin:36px auto 0; height:clamp(420px,64vh,620px); overflow:hidden; }
+.world{ position:absolute; left:0; top:0; width:100%; height:1600px; will-change:transform; }
+.world svg.road{ position:absolute; left:0; top:0; }
+.road path{ fill:none; stroke-linecap:round; }
+.road .base{ stroke:var(--blush-300); stroke-width:16; vector-effect:non-scaling-stroke; }
+.road .dash{ stroke:var(--milk); stroke-width:3; vector-effect:non-scaling-stroke; stroke-dasharray:12 16; }
+.road .gone{ stroke:var(--rose-600); stroke-width:16; vector-effect:non-scaling-stroke; }
+.car{ position:absolute; z-index:3; width:70px; height:101px; margin-left:-35px; margin-top:-50px; transform-origin:50% 50%; will-change:transform; filter:drop-shadow(0 10px 14px rgba(129,62,77,.3)); }
+.stop{ position:absolute; z-index:2; opacity:.4; transition:opacity .4s ease; }
+.stop.active{ opacity:1; }
+.stop .pin{ position:absolute; left:0; top:0; width:34px; height:34px; margin:-17px 0 0 -17px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--rose-500); box-shadow:0 8px 18px rgba(129,62,77,.3); display:flex; align-items:center; justify-content:center; transition:background .4s ease, transform .4s ease; }
+.stop.active .pin{ background:var(--rose-600); transform:rotate(-45deg) scale(1.14); }
+.stop .pin svg{ width:14px; height:14px; fill:var(--blush-25); transform:rotate(45deg); }
+.stop .lead{ position:absolute; top:-1px; height:0; border-top:2px dashed var(--rose-400); }
+.stop .txt{ position:absolute; top:0; transform:translateY(-50%); }
+.stop .t{ display:block; font-size:14px; letter-spacing:.22em; text-transform:uppercase; color:var(--cocoa-800); white-space:nowrap; }
+.stop .d{ display:block; margin-top:5px; font-size:13px; color:var(--cocoa-600); white-space:nowrap; }
 
-.palette{ display:flex; justify-content:center; flex-wrap:wrap; gap:26px; margin-top:46px; }
+.palette{ display:flex; justify-content:center; flex-wrap:wrap; gap:26px; margin-top:50px; }
 .swatch{ text-align:center; }
-.swatch i{ display:block; width:52px; height:52px; border-radius:50%; border:1px solid rgba(69,42,51,.12); margin:0 auto 10px; box-shadow:0 6px 14px rgba(129,62,77,.12); transition:transform .3s ease; }
+.swatch i{ display:block; width:56px; height:56px; border-radius:50%; border:1px solid rgba(69,42,51,.12); margin:0 auto 10px; box-shadow:0 6px 14px rgba(129,62,77,.12); transition:transform .3s ease; }
 .swatch:hover i{ transform:scale(1.12) rotate(-6deg); }
 .swatch span{ font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--cocoa-600); }
 
@@ -170,18 +171,18 @@ h2{ font-size:clamp(2.4rem,6vw,4rem); margin-top:14px; }
 .form-card .foot{ display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-top:6px; }
 .form-card .hint{ font-size:12px; color:var(--cocoa-600); }
 .done{ text-align:center; padding:20px 0 6px; }
-.done .ring{ width:84px; height:84px; margin:0 auto; border-radius:50%; background:var(--rose-600); display:flex; align-items:center; justify-content:center; box-shadow:0 16px 34px rgba(156,82,96,.35); animation:beat 2.4s ease-in-out infinite; }
-.done .ring svg{ width:36px; height:36px; fill:var(--blush-25); }
+.done .ring{ width:88px; height:88px; margin:0 auto; border-radius:50%; background:var(--rose-600); display:flex; align-items:center; justify-content:center; box-shadow:0 16px 34px rgba(156,82,96,.35); animation:beat 2.4s ease-in-out infinite; }
+.done .ring svg{ width:38px; height:38px; fill:var(--blush-25); }
 @keyframes beat{ 0%,100%{transform:scale(1)} 14%{transform:scale(1.12)} 28%{transform:scale(1)} 42%{transform:scale(1.07)} 56%{transform:scale(1)} }
-.done h3{ margin-top:26px; font-size:30px; }
-.done p{ margin-top:12px; font-size:16px; line-height:1.65; }
+.done h3{ margin-top:28px; font-size:clamp(2rem,5vw,2.8rem); }
+.done p{ margin-top:14px; font-size:16px; line-height:1.65; }
 .done .again{ margin-top:26px; background:none; border:none; cursor:pointer; font-family:var(--body); font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--rose-700); border-bottom:1px solid rgba(156,82,96,.4); padding-bottom:3px; }
 
-footer{ background:var(--rose-800); color:var(--blush-200); text-align:center; padding:70px 24px 46px; position:relative; z-index:1; }
-footer h2{ color:var(--blush-25); font-size:clamp(2.6rem,7vw,4rem); }
-footer .line{ margin-top:18px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; }
-footer .tag{ margin-top:30px; font-size:12px; letter-spacing:.24em; color:rgba(228,194,188,.7); }
-footer .made{ margin-top:34px; display:flex; align-items:center; justify-content:center; gap:8px; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:rgba(228,194,188,.5); }
+footer{ background:var(--rose-800); color:var(--blush-200); text-align:center; padding:76px 24px 48px; position:relative; z-index:1; }
+footer h2{ color:var(--blush-25); font-size:clamp(3.2rem,9vw,5.8rem); }
+footer .line{ margin-top:20px; font-size:11px; letter-spacing:.32em; text-transform:uppercase; }
+footer .tag{ margin-top:32px; font-size:12px; letter-spacing:.24em; color:rgba(228,194,188,.7); }
+footer .made{ margin-top:36px; display:flex; align-items:center; justify-content:center; gap:8px; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:rgba(228,194,188,.5); }
 footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
 
 .reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s ease, transform .8s ease; }
@@ -201,7 +202,7 @@ footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
 <nav>
   <a class="logo" href="#top">Е<svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg>Н</a>
   <div class="links">
-    <a href="#date">Дата</a>
+    <a href="#invite">Приглашение</a>
     <a href="#place">Место</a>
     <a href="#day">День</a>
     <a href="#dress">Дресс-код</a>
@@ -228,37 +229,18 @@ footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
 </div>
 
 <section class="pad white invite" id="invite">
-  <div class="wrap">
+  <div class="wrap center">
     <p class="eyebrow reveal">наше приглашение</p>
     <h2 class="reveal">Дорогие наши!</h2>
     <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
-    <div style="height:34px"></div>
+    <div style="height:36px"></div>
     <p class="reveal">В жизни есть дни, которые делят время на «до» и «после». Для нас такой день — <b style="color:var(--rose-700)">6 августа 2027 года</b>: мы станем семьёй.</p>
     <p class="reveal">Мы будем бесконечно счастливы разделить этот день с вами — самыми близкими и дорогими. Приходите! Без вас наш праздник будет неполным.</p>
     <p class="sign reveal">С любовью, Елизавета и Никита</p>
   </div>
 </section>
 
-<section class="pad" id="date">
-  <div class="wrap center">
-    <p class="eyebrow reveal">save the date</p>
-    <h2 class="reveal">Сохраните дату</h2>
-    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
-    <p class="sub reveal">До самого тёплого дня этого лета осталось совсем немного</p>
-    <div class="count reveal">
-      <div class="cell"><div class="num" id="cd-d">00</div><div class="lab">дней</div></div>
-      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
-      <div class="cell"><div class="num" id="cd-h">00</div><div class="lab">часов</div></div>
-      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
-      <div class="cell"><div class="num" id="cd-m">00</div><div class="lab">минут</div></div>
-      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
-      <div class="cell"><div class="num" id="cd-s">00</div><div class="lab">секунд</div></div>
-    </div>
-    <p class="date-note reveal">Роспись начнётся в <b>14:40</b>. Приходите минут за двадцать — и мы встретим вас у ЗАГСа.</p>
-  </div>
-</section>
-
-<section class="pad white" id="place">
+<section class="pad" id="place" style="background:var(--blush-100)">
   <div class="wrap center">
     <p class="eyebrow reveal">место торжества</p>
     <h2 class="reveal">Где мы вас ждём</h2>
@@ -292,53 +274,56 @@ footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
       <p class="eyebrow">тайминг</p>
       <h2>Как пройдёт день</h2>
       <div class="divider"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
-      <p class="sub">Листайте — мы поедем по маршруту нашего дня</p>
+      <p class="sub">Листайте — и мы поедем вниз по маршруту нашего дня</p>
     </div>
 
-    <div class="roadbox">
-      <svg class="road" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true">
-        <path id="roadBase" class="base" d="M -40 320 C 120 300 180 220 300 210 C 430 200 470 130 560 120 C 660 110 700 180 820 170 C 900 163 950 120 1040 110"/>
-        <path id="roadDash" class="dash" d="M -40 320 C 120 300 180 220 300 210 C 430 200 470 130 560 120 C 660 110 700 180 820 170 C 900 163 950 120 1040 110"/>
-        <path id="roadGone" class="gone" d="M -40 320 C 120 300 180 220 300 210 C 430 200 470 130 560 120 C 660 110 700 180 820 170 C 900 163 950 120 1040 110"/>
-      </svg>
-
-      <div class="stop" data-frac="0.32" data-card="0">
-        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
-        <div class="t">14:40 · ЗАГС</div><div class="d">ул. Еремеева, 1</div>
-      </div>
-      <div class="stop" data-frac="0.63" data-card="1">
-        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
-        <div class="t">16:00 · Геокупол</div><div class="d">Лососинское ш., 17</div>
-      </div>
-      <div class="stop" data-frac="0.95" data-card="2">
-        <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
-        <div class="t">01:00 · Финал</div><div class="d">танцы до последнего</div>
-      </div>
-
-      <div class="car" id="car">
-        <svg viewBox="0 0 120 90" width="96" height="72" aria-hidden="true">
-          <circle cx="46" cy="26" r="10" fill="#5A3A44"/>
-          <circle cx="46" cy="30" r="8" fill="#F6E0D2"/>
-          <rect x="38" y="16" width="16" height="6" rx="2" fill="#452A33"/>
-          <circle cx="72" cy="26" r="10" fill="#F6E0D2"/>
-          <path d="M64 20 q8 -10 16 0 q2 6 -2 8 l-12 0 q-4 -2 -2 -8z" fill="#8A6069"/>
-          <path d="M64 22 q-4 10 2 16 l4 -2 q-4 -8 -1 -14z" fill="rgba(255,252,250,.9)"/>
-          <circle cx="78" cy="24" r="2" fill="#C68B92"/>
-          <path d="M59 8 c-2.5-2.5-6.5-1-6.5 2 0 2.5 4 5 6.5 7 2.5-2 6.5-4.5 6.5-7 0-3-4-4.5-6.5-2z" fill="#9C5260"/>
-          <path d="M14 62 q0-14 14-16 l14-2 q6-8 18-8 h14 q12 0 16 10 l10 2 q8 2 8 14 v4 h-94 z" fill="#B26E79"/>
-          <path d="M44 40 q5-6 14-6 h12 q8 0 11 8 l2 6 h-40 z" fill="#FAF0ED"/>
-          <rect x="100" y="52" width="8" height="5" rx="2" fill="#F6E7E3"/>
-          <rect x="14" y="52" width="7" height="5" rx="2" fill="#813E4D"/>
-          <circle cx="34" cy="66" r="11" fill="#452A33"/><circle cx="34" cy="66" r="4.5" fill="#D5A5A1"/>
-          <circle cx="88" cy="66" r="11" fill="#452A33"/><circle cx="88" cy="66" r="4.5" fill="#D5A5A1"/>
+    <div class="roadbox" id="roadbox">
+      <div class="world" id="world">
+        <svg class="road" width="100%" height="1600" viewBox="0 0 100 1600" preserveAspectRatio="none" aria-hidden="true">
+          <path id="roadBase" class="base" d="M 50 60 C 80 110 80 170 50 230 C 20 290 20 350 50 410 C 80 470 80 530 50 590 C 20 650 20 710 50 770 C 80 830 80 890 50 950 C 20 1010 20 1070 50 1130 C 80 1190 80 1250 50 1310 C 28 1355 28 1405 50 1450 C 58 1478 58 1512 50 1540"/>
+          <path class="dash" d="M 50 60 C 80 110 80 170 50 230 C 20 290 20 350 50 410 C 80 470 80 530 50 590 C 20 650 20 710 50 770 C 80 830 80 890 50 950 C 20 1010 20 1070 50 1130 C 80 1190 80 1250 50 1310 C 28 1355 28 1405 50 1450 C 58 1478 58 1512 50 1540"/>
+          <path id="roadGone" class="gone" d="M 50 60 C 80 110 80 170 50 230 C 20 290 20 350 50 410 C 80 470 80 530 50 590 C 20 650 20 710 50 770 C 80 830 80 890 50 950 C 20 1010 20 1070 50 1130 C 80 1190 80 1250 50 1310 C 28 1355 28 1405 50 1450 C 58 1478 58 1512 50 1540"/>
         </svg>
-      </div>
-    </div>
 
-    <div class="journey-cards" id="jcards">
-      <div class="jcard"><h3>14:40 — Роспись</h3><p>Встречаемся у ЗАГСа на Еремеева, 1. Берите платочки — будет трогательно.</p></div>
-      <div class="jcard"><h3>16:00 — Банкет</h3><p>Переезжаем в геокупол на Лососинском, 17: ужин, тосты и первый танец.</p></div>
-      <div class="jcard"><h3>01:00 — Финал</h3><p>Танцуем до последнего, зажигаем бенгальские огни и провожаем этот день.</p></div>
+        <div class="stop" data-frac="0.16">
+          <span class="lead"></span>
+          <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+          <div class="txt"><span class="t">14:40 · Роспись</span><span class="d">ЗАГС · ул. Еремеева, 1</span></div>
+        </div>
+        <div class="stop" data-frac="0.5">
+          <span class="lead"></span>
+          <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+          <div class="txt"><span class="t">16:00 · Банкет</span><span class="d">Геокупол · Лососинское ш., 17</span></div>
+        </div>
+        <div class="stop" data-frac="0.84">
+          <span class="lead"></span>
+          <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+          <div class="txt"><span class="t">01:00 · Финал</span><span class="d">Танцы и бенгальские огни</span></div>
+        </div>
+
+        <div class="car" id="car">
+          <svg viewBox="0 0 90 130" width="70" height="101" aria-hidden="true">
+            <rect x="11" y="30" width="11" height="24" rx="5.5" fill="#452A33"/>
+            <rect x="68" y="30" width="11" height="24" rx="5.5" fill="#452A33"/>
+            <rect x="11" y="78" width="11" height="24" rx="5.5" fill="#452A33"/>
+            <rect x="68" y="78" width="11" height="24" rx="5.5" fill="#452A33"/>
+            <path d="M45 6 C63 6 73 17 73 35 L73 95 C73 113 63 124 45 124 C27 124 17 113 17 95 L17 35 C17 17 27 6 45 6 Z" fill="#B26E79"/>
+            <rect x="24" y="8" width="11" height="5" rx="2.5" fill="#813E4D"/>
+            <rect x="55" y="8" width="11" height="5" rx="2.5" fill="#813E4D"/>
+            <rect x="26" y="26" width="38" height="12" rx="6" fill="#FAF0ED" opacity=".9"/>
+            <path d="M52 44 q-6 -16 4 -24 q0 14 5 20 Z" fill="rgba(255,252,250,.92)"/>
+            <circle cx="36" cy="53" r="8.5" fill="#5A3A44"/>
+            <path d="M27.5 53 a8.5 8.5 0 0 0 17 0 Z" fill="#F6E0D2"/>
+            <circle cx="54" cy="53" r="8.5" fill="#8A6069"/>
+            <path d="M45.5 53 a8.5 8.5 0 0 0 17 0 Z" fill="#F6E0D2"/>
+            <circle cx="50" cy="41" r="2" fill="#C68B92"/>
+            <rect x="24" y="66" width="42" height="15" rx="7.5" fill="#FAF0ED"/>
+            <path d="M45 103 C39.5 98.5 35.5 95 35.5 91.8 A4.8 4.8 0 0 1 45 89.6 A4.8 4.8 0 0 1 54.5 91.8 C54.5 95 50.5 98.5 45 103 Z" fill="#9C5260"/>
+            <rect x="23" y="116" width="13" height="6" rx="3" fill="#F6E7E3"/>
+            <rect x="54" y="116" width="13" height="6" rx="3" fill="#F6E7E3"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -421,6 +406,24 @@ footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
   </div>
 </section>
 
+<section class="pad timer" id="date">
+  <div class="wrap center">
+    <p class="eyebrow reveal">save the date</p>
+    <h2 class="reveal">До встречи осталось</h2>
+    <div class="divider reveal"><i></i><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg><i></i></div>
+    <div class="count reveal">
+      <div class="cell"><div class="num" id="cd-d">00</div><div class="lab">дней</div></div>
+      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <div class="cell"><div class="num" id="cd-h">00</div><div class="lab">часов</div></div>
+      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <div class="cell"><div class="num" id="cd-m">00</div><div class="lab">минут</div></div>
+      <div class="sep"><svg viewBox="0 0 24 24"><path d="M12 20.7C7.1 17.2 3.3 13.8 2.2 10.3 1.3 7.3 3 4.4 6 4c1.9-.2 3.8.6 4.9 2.1l1.1 1.5 1.1-1.5C14.2 4.6 16.1 3.8 18 4c3 .4 4.7 3.3 3.8 6.3-1.1 3.5-4.9 6.9-9.8 10.4Z"/></svg></div>
+      <div class="cell"><div class="num" id="cd-s">00</div><div class="lab">секунд</div></div>
+    </div>
+    <p class="date-note reveal">Роспись начнётся в <b>14:40</b>. Приходите минут за двадцать — и мы встретим вас у ЗАГСа. Сохраните дату: <b>6 августа 2027</b>.</p>
+  </div>
+</section>
+
 <footer>
   <h2>Ждём вас!</h2>
   <p class="line">Елизавета и Никита · 06.08.2027</p>
@@ -431,7 +434,6 @@ footer .made svg{ width:10px; height:10px; fill:var(--blush-300); }
 <script>
 /* =====================================================================
    ⬇️⬇️⬇️  ВСТАВЬТЕ СЮДА адрес вашего Google Apps Script (заканчивается на /exec)
-   Как его получить — см. шаг 2 инструкции.
    ===================================================================== */
 const SCRIPT_URL = "ВСТАВЬТЕ_СЮДА_АДРЕС_СЦЕНАРИЯ";
 
@@ -494,56 +496,83 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
   tick(); setInterval(tick,1000);
 })();
 
-/* ---------------- путешествие: машинка едет по дороге ---------------- */
+/* ---------- путешествие: машинка едет ВНИЗ по извилистой дороге ---------- */
 (function(){
-  const sec = document.getElementById("day");
-  const road = document.getElementById("roadBase");
-  const gone = document.getElementById("roadGone");
-  const car = document.getElementById("car");
-  const box = document.querySelector(".roadbox");
+  const sec   = document.getElementById("day");
+  const box   = document.getElementById("roadbox");
+  const world = document.getElementById("world");
+  const road  = document.getElementById("roadBase");
+  const gone  = document.getElementById("roadGone");
+  const car   = document.getElementById("car");
   const stops = [...document.querySelectorAll(".stop")];
-  const cards = [...document.querySelectorAll(".jcard")];
+  const WORLD_H = 1600;
   const total = road.getTotalLength();
 
-  stops.forEach(s=>{
-    const p = road.getPointAtLength(parseFloat(s.dataset.frac)*total);
-    s.style.left = (p.x/1000*100)+"%";
-    s.style.top  = (p.y/400*100)+"%";
-  });
+  /* расставляем пункты вдоль дороги, подписи — по бокам, чтобы машинка их не закрывала */
+  function layout(){
+    const boxW = box.clientWidth;
+    stops.forEach(s=>{
+      const p = road.getPointAtLength(parseFloat(s.dataset.frac)*total);
+      const x = p.x/100*boxW, y = p.y;
+      s.style.left = x+"px"; s.style.top = y+"px";
+      const toLeft = x > boxW*0.5;             /* подпись с противоположной от дороги стороны */
+      const txt  = s.querySelector(".txt");
+      const lead = s.querySelector(".lead");
+      txt.style.left = txt.style.right = "auto";
+      lead.style.left = lead.style.right = "auto";
+      if(toLeft){
+        txt.style.right  = (boxW - x + 46)+"px";
+        txt.style.textAlign = "right";
+        lead.style.right = (boxW - x + 12)+"px";
+      }else{
+        txt.style.left  = (x + 46)+"px";
+        txt.style.textAlign = "left";
+        lead.style.left = (x + 12)+"px";
+      }
+      lead.style.width = "32px";
+    });
+  }
 
   function progress(){
     const r = sec.getBoundingClientRect();
     const max = sec.offsetHeight - innerHeight;
     return Math.min(1, Math.max(0, -r.top / max));
   }
+
   function place(){
     const t = progress();
     const L = t*total;
     const p = road.getPointAtLength(L);
     const q = road.getPointAtLength(Math.min(total, L+2));
-    const bw = box.clientWidth, bh = box.clientHeight;
-    const x = p.x/1000*bw, y = p.y/400*bh;
-    const ang = Math.atan2((q.y-p.y)/400*bh, (q.x-p.x)/1000*bw)*180/Math.PI;
-    car.style.left = x+"px";
-    car.style.top = y+"px";
-    car.style.transform = `rotate(${ang}deg)`;
+    const boxW = box.clientWidth, boxH = box.clientHeight;
+    const carX = p.x/100*boxW;
+    const carY = p.y;
+    /* «мир» дороги прокручивается вверх, машинка остаётся в кадре */
+    let wy = boxH*0.45 - carY;
+    wy = Math.min(0, wy);
+    wy = Math.max(boxH - WORLD_H, wy);
+    world.style.transform = "translate3d(0,"+wy+"px,0)";
+    const dx = (q.x-p.x)/100*boxW;
+    const dy = q.y-p.y;
+    const ang = Math.atan2(dy,dx)*180/Math.PI - 90;
+    car.style.left = carX+"px";
+    car.style.top  = carY+"px";
+    car.style.transform = "rotate("+ang+"deg)";
     gone.style.strokeDasharray = total;
     gone.style.strokeDashoffset = total - L;
-    let active = -1;
-    stops.forEach((s,i)=>{
+    stops.forEach(s=>{
       const f = parseFloat(s.dataset.frac);
-      const on = t >= f-0.03;
-      s.classList.toggle("active", on);
-      if(on) active = i;
+      s.classList.toggle("active", t >= f-0.04);
     });
-    cards.forEach((c,i)=>c.classList.toggle("on", i===Math.max(active,0)));
   }
-  if(reduceMotion){ place(); return; }
-  let raf=null;
-  function onScroll(){ if(raf) return; raf=requestAnimationFrame(()=>{ raf=null; place(); }); }
+
+  layout(); place();
+  if(reduceMotion) return;
+  let raf = null;
+  function onScroll(){ if(raf) return; raf = requestAnimationFrame(()=>{ raf=null; place(); }); }
+  function onResize(){ layout(); place(); }
   addEventListener("scroll", onScroll, {passive:true});
-  addEventListener("resize", onScroll);
-  place();
+  addEventListener("resize", onResize);
 })();
 
 /* ---------------- анкета -> Google Таблица ---------------- */
